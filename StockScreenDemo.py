@@ -304,4 +304,4 @@ if(infoType == 'Technical'):
 if(infoType == 'Intraday'):
     stock = yf.Ticker(ticker)
     Intraday = pdr.DataReader(ticker, data_source="yahoo", start="2022-04-15", end="2022-04-21")
-	st.table(Intraday)
+st.table(Intraday)
