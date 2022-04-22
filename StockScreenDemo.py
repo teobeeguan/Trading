@@ -317,6 +317,7 @@ d2 = st.date_input(
      "Choose the end date",
      datetime.date(2030, 7, 6))
 st.write('To:', d2)
+
     stock = yf.Ticker(ticker)
 
     Intraday = pdr.DataReader(ticker, data_source="yahoo",start=d1,end=d2)
