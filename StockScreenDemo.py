@@ -15,7 +15,7 @@ import datetime as dt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-st.sidebar.image("https://static.wixstatic.com/media/dca03b_47c5d21722a745d894994af213839990~mv2.png/v1/fill/w_402,h_190,al_c,lg_1,enc_auto/Logo-RIVALDI_noir2.png", use_column_width=True)
+st.sidebar.image("https://static.wixstatic.com/media/dca03b_47c5d21722a745d894994af213839990~mv2.png/v1/fill/w_402,h_190,al_c,lg_1,enc_auto/Logo-RIVALDI_noir2.png")
 st.sidebar.write("""
 # RIVACUBE SCREENER 
 ## First Jet for simple analysis
