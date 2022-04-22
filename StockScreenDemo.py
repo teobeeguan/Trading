@@ -304,7 +304,7 @@ if(infoType == 'Technical'):
     st.plotly_chart(figBoll, use_container_width=True)
 if(infoType == 'Intraday'):
     Intraday = pdr.DataReader(ticker, data_source="yahoo")
-    lesdates = Intraday['Date'].sort_values().tolist()  
+    lesdates = Intraday['Date']
     date1 = st.sidebar.selectbox(
     'Choose the beginning date',
      lesdates)
