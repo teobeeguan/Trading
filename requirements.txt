@@ -2,3 +2,5 @@ yfinance
 streamlit
 pandas
 plotly
+investpy
+pandas_datareader
