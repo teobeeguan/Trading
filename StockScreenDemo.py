@@ -6,6 +6,7 @@ Created on Sat Feb 20 17:45:01 2021
 """
 
 import pandas as pd
+import datetime
 from pandas_datareader import data as pdr
 import investpy
 import yfinance as yf
@@ -23,13 +24,15 @@ ticker = st.sidebar.selectbox(
      symbols)
 
 traday = pdr.DataReader(ticker, data_source="yahoo")
-lesdates = traday['Date']
-date1 = st.sidebar.selectbox(
-    'Choose the beginning date',
-     lesdates)
-date2 = st.sidebar.selectbox(
-    'Choose the end date',
-     lesdates)
+
+d1 = st.date_input(
+     "Choose the beginning date",
+     datetime.date(2019, 7, 6))
+st.write('From:', d1)
+d2 = st.date_input(
+     "Choose the end date",
+     datetime.date(2030, 7, 6))
+st.write('To:', d2)
 
 infoType = st.sidebar.radio(
         "Choose an info type",
@@ -314,5 +317,6 @@ if(infoType == 'Technical'):
     st.plotly_chart(figBoll, use_container_width=True)
 if(infoType == 'Intraday'):
     stock = yf.Ticker(ticker)
-    Intraday = pdr.DataReader(ticker, data_source="yahoo",start=date1,end=date2)
+
+    Intraday = pdr.DataReader(ticker, data_source="yahoo",start=d1,end=d2)
 st.table(Intraday)
