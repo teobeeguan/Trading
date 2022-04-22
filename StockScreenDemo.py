@@ -19,7 +19,8 @@ st.sidebar.image("https://slm-sa.com/wp-content/uploads/2020/01/LogoSLM-IF-1.png
 st.sidebar.write("""
 # RIVACUBE SCREENER 
 ## First Jet for simple analysis
-*Built by SLM for Rivaldi Project*
+*By SLM for Rivaldi Project*
+
 """)
 
 snp500 = pd.read_csv("Datasets/SP500.csv")
