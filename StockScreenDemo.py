@@ -16,10 +16,20 @@ from plotly.subplots import make_subplots
 
 snp500 = pd.read_csv("Datasets/SP500.csv")
 symbols = snp500['Symbol'].sort_values().tolist()        
+Intraday = pdr.DataReader(ticker, data_source="yahoo")
+lesdates = Intraday['Date']
 
 ticker = st.sidebar.selectbox(
     'Choose a S&P 500 Stock',
      symbols)
+
+
+date1 = st.sidebar.selectbox(
+    'Choose the beginning date',
+     lesdates)
+date2 = st.sidebar.selectbox(
+    'Choose the end date',
+     lesdates)
 
 infoType = st.sidebar.radio(
         "Choose an info type",
@@ -303,14 +313,6 @@ if(infoType == 'Technical'):
     figBoll.update_yaxes(tickprefix="$")
     st.plotly_chart(figBoll, use_container_width=True)
 if(infoType == 'Intraday'):
-    Intraday = pdr.DataReader(ticker, data_source="yahoo")
-    lesdates = Intraday['Date']
-    date1 = st.sidebar.selectbox(
-    'Choose the beginning date',
-     lesdates)
-    date2 = st.sidebar.selectbox(
-    'Choose the end date',
-     lesdates)
     stock = yf.Ticker(ticker)
     Intraday = pdr.DataReader(ticker, data_source="yahoo",start=date1,end=date2)
 st.table(Intraday)
