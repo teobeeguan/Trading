@@ -303,6 +303,14 @@ if(infoType == 'Technical'):
     figBoll.update_yaxes(tickprefix="$")
     st.plotly_chart(figBoll, use_container_width=True)
 if(infoType == 'Intraday'):
+    Intraday = pdr.DataReader(ticker, data_source="yahoo")
+    lesdates = Intraday['Date'].sort_values().tolist()  
+    date1 = st.sidebar.selectbox(
+    'Choose the beginning date',
+     lesdates)
+    date2 = st.sidebar.selectbox(
+    'Choose the end date',
+     lesdates)
     stock = yf.Ticker(ticker)
-    Intraday = pdr.DataReader(ticker, data_source="yahoo", start="2022-04-15", end="2022-04-21")
+    Intraday = pdr.DataReader(ticker, data_source="yahoo",start=date1,end=date2)
 st.table(Intraday)
