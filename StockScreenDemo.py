@@ -16,8 +16,9 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 st.sidebar.write("""
-# RIVACUBE ELEMENTARY SCREENER 
-First Jet with Fundamental, Technical and Intraday analysis
+# RIVACUBE SCREENER 
+First Jet for simple analysis
+“““
 *Built by SLM for Rivaldi Project*
 """)
 
