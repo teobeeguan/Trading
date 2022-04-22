@@ -17,8 +17,7 @@ from plotly.subplots import make_subplots
 
 st.sidebar.write("""
 # RIVACUBE SCREENER 
-First Jet for simple analysis
-"""
+## First Jet for simple analysis
 *Built by SLM for Rivaldi Project*
 """)
 
