@@ -23,7 +23,7 @@ ticker = st.sidebar.selectbox(
      symbols)
 
 traday = pdr.DataReader(ticker, data_source="yahoo")
-lesdates = Intraday['Date']
+lesdates = traday['Date']
 date1 = st.sidebar.selectbox(
     'Choose the beginning date',
      lesdates)
