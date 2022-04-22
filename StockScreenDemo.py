@@ -311,11 +311,11 @@ if(infoType == 'Technical'):
 if(infoType == 'Intraday'):
     d1 = st.date_input(
      "Choose the beginning date",
-     datetime.date(2019, 7, 6))
+     datetime.date(2022, 4, 5))
     st.write('From:', d1)
     d2 = st.date_input(
      "Choose the end date",
-     datetime.date(2022, 4, 6))
+     datetime.date(2022, 4, 7))
     st.write('To:', d2)
 
     stock = yf.Ticker(ticker)
