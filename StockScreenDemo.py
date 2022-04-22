@@ -315,7 +315,7 @@ if(infoType == 'Intraday'):
     st.write('From:', d1)
     d2 = st.date_input(
      "Choose the end date",
-     datetime.date(2030, 7, 6))
+     datetime.date(2022, 4, 6))
     st.write('To:', d2)
 
     stock = yf.Ticker(ticker)
