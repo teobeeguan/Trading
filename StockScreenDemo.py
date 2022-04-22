@@ -70,7 +70,7 @@ if(infoType == 'Fundamental'):
             'Dividend Yield (%)': info['dividendYield'],
             'Five year Avg Dividend Yield (%)': info['fiveYearAvgDividendYield'],
             'Payout Ratio': info['payoutRatio'],
-            'ISIN Number': info['ISIN'],
+            'ISIN Number': info['isin'],
         }
     
     fundDF = pd.DataFrame.from_dict(fundInfo, orient='index')
