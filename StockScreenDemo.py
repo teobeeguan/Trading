@@ -15,14 +15,16 @@ import datetime as dt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-snp500 = pd.read_csv("Datasets/SP500.csv")
-symbols = snp500['Symbol'].sort_values().tolist()        
-
-st.write("""
-#RIVACUBE ELEMENTARY SCREENER 
+st.sidebar.write("""
+# RIVACUBE ELEMENTARY SCREENER 
 First Jet with Fundamental, Technical and Intraday analysis
 *Built by SLM for Rivaldi Project*
 """)
+
+snp500 = pd.read_csv("Datasets/SP500.csv")
+symbols = snp500['Symbol'].sort_values().tolist()        
+
+
 ticker = st.sidebar.selectbox(
     'Choose a S&P 500 Stock',
      symbols)
