@@ -6,6 +6,7 @@ Created on Sat Feb 20 17:45:01 2021
 """
 
 import pandas as pd
+from pandas_datareader import data as pdr
 import investpy
 import yfinance as yf
 import streamlit as st
