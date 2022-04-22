@@ -6,6 +6,7 @@ Created on Sat Feb 20 17:45:01 2021
 """
 
 import pandas as pd
+import investpy
 import yfinance as yf
 import streamlit as st
 import datetime as dt
@@ -21,7 +22,7 @@ ticker = st.sidebar.selectbox(
 
 infoType = st.sidebar.radio(
         "Choose an info type",
-        ('Fundamental', 'Technical')
+        ('Fundamental', 'Technical', 'Intraday')
     )
 
 stock = yf.Ticker(ticker)
@@ -99,7 +100,7 @@ if(infoType == 'Fundamental'):
     
     marketDF = pd.DataFrame(data=marketInfo, index=[0])
     st.table(marketDF)
-else:
+if(infoType == 'Technical'):
     def calcMovingAverage(data, size):
         df = data.copy()
         df['sma'] = df['Adj Close'].rolling(size).mean()
@@ -300,3 +301,7 @@ else:
     
     figBoll.update_yaxes(tickprefix="$")
     st.plotly_chart(figBoll, use_container_width=True)
+if(infoType == 'Intraday'):
+    stock = yf.Ticker(ticker)
+    Intraday = pdr.DataReader(ticker, data_source="yahoo", start="2022-04-15", end="2022-04-21")
+	st.table(Intraday)
