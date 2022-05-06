@@ -10,3 +10,4 @@ os
 time
 matplotlib
 yahoo_fin
+pip
