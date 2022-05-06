@@ -5,8 +5,6 @@ plotly
 investpy
 pandas_datareader
 numpy
-os
-random
 time
 matplotlib
 yahoo_fin
