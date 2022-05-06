@@ -10,4 +10,4 @@ numpy
 time
 matplotlib
 yahoo_fin
-timeout = 30
+timeout == 30
