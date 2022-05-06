@@ -4,8 +4,6 @@ pandas
 plotly
 investpy
 pandas_datareader
-sklearn
-sklearn.model_selection
 numpy
 random
 os
