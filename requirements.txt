@@ -4,9 +4,6 @@ pandas
 plotly
 investpy
 pandas_datareader
-tensorflow
-tensorflow.keras.models
-tensorflow.keras.layers
 sklearn
 sklearn.model_selection
 numpy
