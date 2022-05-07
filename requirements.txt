@@ -4,8 +4,6 @@ pandas
 plotly
 investpy
 pandas_datareader
-os
-random
 numpy
 time
 matplotlib
