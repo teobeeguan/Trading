@@ -7,4 +7,3 @@ pandas_datareader
 numpy
 matplotlib
 yahoo_fin
-pywin32==300
