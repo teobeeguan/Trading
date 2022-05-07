@@ -5,7 +5,6 @@ plotly
 investpy
 pandas_datareader
 numpy
-time
 matplotlib
 yahoo_fin
 pywin32==300
