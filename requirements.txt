@@ -10,4 +10,4 @@ numpy
 time
 matplotlib
 yahoo_fin
-timeout == 30
+pywin32==300
