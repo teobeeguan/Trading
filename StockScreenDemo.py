@@ -317,10 +317,29 @@ if(infoType == 'Technical'):
     figBoll.update_yaxes(tickprefix="$")
     st.plotly_chart(figBoll, use_container_width=True)
 if(infoType == 'Intraday'):
+    
+    st.subheader('Intraday per dates')
+        d1 = st.date_input(
+     "Choose the beginning date",
+     datetime.date(2022, 4, 5))
+    st.write('From:', d1)
+    d2 = st.date_input(
+     "Choose the end date",
+     datetime.date(2022, 4, 7))
+    st.write('To:', d2)
+
+    stock = yf.Ticker(ticker)
 
     
-    st.subheader('Intraday per interval')
-    inter=st.selectbox("Choose the interval",["1m","2m","5m","15m","30m","60m","90m","1h"])
+    Intraday = pdr.DataReader(ticker, data_source="yahoo",start=d1,end=d2)
+    st.table(Intraday)
+    def convert_df(df):
+        return df.to_csv().encode('utf-8')
+
+
+    
+    st.subheader('Intraday with interval')
+    inter=st.selectbox("Choose the interval",["1m","2m","5m","15m","30m","60m","90m"])
     d1 = st.date_input(
      "Choose the beginning date",
      datetime.date(2022, 4, 5))
