@@ -319,7 +319,7 @@ if(infoType == 'Technical'):
 if(infoType == 'Intraday'):
     
     st.subheader('Intraday per dates')
-        d1 = st.date_input(
+    d1 = st.date_input(
      "Choose the beginning date",
      datetime.date(2022, 4, 5))
     st.write('From:', d1)
@@ -336,7 +336,13 @@ if(infoType == 'Intraday'):
     def convert_df(df):
         return df.to_csv().encode('utf-8')
 
-
+    csv = convert_df(Intraday)
+    st.download_button(
+   "Press to Download",
+   csv,
+   "file.csv",
+   "text/csv",
+   key='download-csv'
     
     st.subheader('Intraday with interval')
     inter=st.selectbox("Choose the interval",["1m","2m","5m","15m","30m","60m","90m"])
@@ -352,13 +358,13 @@ if(infoType == 'Intraday'):
     stock = yf.Ticker(ticker)
 
     
-    Intraday = stock.history(interval=inter,start=d1,end=d2)
-    st.table(Intraday)
+    Interaday = stock.history(interval=inter,start=d1,end=d2)
+    st.table(Interaday)
     def convert_df(df):
         return df.to_csv().encode('utf-8')
 
 
-    csv = convert_df(Intraday)
+    csv = convert_df(Interaday)
     st.download_button(
    "Press to Download",
    csv,
