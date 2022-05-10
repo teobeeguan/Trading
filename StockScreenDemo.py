@@ -320,7 +320,7 @@ if(infoType == 'Intraday'):
 
     
     st.subheader('Intraday per interval')
-    inter=st.selectbox("Choose the interval",["1m","2m","5m"])
+    inter=st.selectbox("Choose the interval",["1m","2m","5m","15m","30m","60m","90m","1h","1d","5d","1mo","3mo","1y"])
     d1 = st.date_input(
      "Choose the beginning date",
      datetime.date(2022, 4, 5))
