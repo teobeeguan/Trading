@@ -317,7 +317,7 @@ if(infoType == 'Technical'):
     figBoll.update_yaxes(tickprefix="$")
     st.plotly_chart(figBoll, use_container_width=True)
 if(infoType == 'Intraday'):
-    
+    st.title('Intradays overview')
     st.subheader('Intraday per dates')
     d1 = st.date_input(
      "Choose the beginning date",
