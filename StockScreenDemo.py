@@ -346,7 +346,7 @@ if(infoType == 'Intraday'):
    key='download-csv'
     
     st.subheader('Intraday per interval')
-    #interval=st.sidebar.selectbox("Choose the interval",["1m","2m","5m"])
+    inter=st.selectbox("Choose the interval",["1m","2m","5m"])
     d1 = st.date_input(
      "Choose the beginning date",
      datetime.date(2022, 4, 5))
@@ -359,7 +359,7 @@ if(infoType == 'Intraday'):
     stock = yf.Ticker(ticker)
 
     
-    Intraday = stock.history(interval="2m",start=d1,end=d2)
+    Intraday = stock.history(interval=inter,start=d1,end=d2)
     st.table(Intraday)
     def convert_df(df):
         return df.to_csv().encode('utf-8')
