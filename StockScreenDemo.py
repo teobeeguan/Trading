@@ -328,7 +328,7 @@ if(infoType == 'Intraday'):
 
     stock = yf.Ticker(ticker)
 
-    Intraday = pdr.DataReader(ticker, data_source="yahoo",start=d1,end=d2)
+    Intraday = stock.history(interval="1m",start=d1,end=d2)
     st.table(Intraday)
     def convert_df(df):
         return df.to_csv().encode('utf-8')
