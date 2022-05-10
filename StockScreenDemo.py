@@ -362,3 +362,4 @@ if(infoType == 'Intraday'):
    "file.csv",
    "text/csv",
    key='download-csv'
+    )
