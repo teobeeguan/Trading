@@ -8,3 +8,4 @@ numpy
 matplotlib
 yahoo_fin
 keras
+tensorflow
