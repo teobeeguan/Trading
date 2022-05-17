@@ -13,6 +13,7 @@ import yfinance as yf
 import streamlit as st
 import datetime as dt
 import numpy as np
+import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from keras.models import load_model
