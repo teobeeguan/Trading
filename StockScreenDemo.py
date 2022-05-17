@@ -14,7 +14,7 @@ import streamlit as st
 import datetime as dt
 import numpy as np
 import plotly.graph_objects as go
-import keras.models
+import keras
 from plotly.subplots import make_subplots
 from keras.models import load_model
 
