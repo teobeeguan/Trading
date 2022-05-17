@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from keras.models import load_model
+from sklearn.preprocessing import MinMaxScaler
 
 st.sidebar.image("https://slm-sa.com/wp-content/uploads/2020/01/LogoSLM-IF-1.png")
 st.sidebar.write("""
@@ -405,7 +406,7 @@ if(infoType == 'Prediction'):
     data_train=pd.DataFrame(df['Close'][0:int(len(df)*0.70)])
     data_test=pd.DataFrame(df['Close'][int(len(df)*0.70):int(len(df))])
 
-    from sklearn.preprocessing import MinMaxScaler
+    
     scaler=MinMaxScaler(feature_range=(0,1))
 
     data_train_array=scaler.fit_transform(data_train)
