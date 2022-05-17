@@ -7,3 +7,4 @@ pandas_datareader
 numpy
 matplotlib
 yahoo_fin
+keras
