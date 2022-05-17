@@ -369,7 +369,7 @@ if(infoType == 'Intraday'):
     )
 if(infoType == 'Prediction'):
     d11 = '1999-01-01'
-    d22 = '2001-12-31'
+    d22 = '2021-12-31'
 
     st.title("stock prediction")
     user_input=ticker
@@ -422,7 +422,7 @@ if(infoType == 'Prediction'):
     y_train=np.array(y_train)
 
     #load model
-    model=Ridge(alpha=0)
+    model=load_model('keras_model.h5')
     past_100_days=data_train.tail(100)
     final_df=past_100_days.append(data_test, ignore_index=True)
     input_data=scaler.fit_transform(final_df)
