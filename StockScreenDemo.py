@@ -371,7 +371,7 @@ if(infoType == 'Prediction'):
 
     st.title("stock prediction")
     user_input=ticker
-    df=data.DataReader(ticker, 'yahoo', start, end)
+    df=data.DataReader(ticker, data_source="yahoo", start, end)
 
     st.subheader("data from 2010-2021")
     st.write(df.describe())
