@@ -366,12 +366,12 @@ if(infoType == 'Intraday'):
    key='download-csv'
     )
 if(infoType == 'Prediction'):
-    start = '1999-01-01'
-    end = '2001-12-31'
+    d11 = '1999-01-01'
+    d22 = '2001-12-31'
 
     st.title("stock prediction")
     user_input=ticker
-    df=data.DataReader(ticker, data_source='yahoo', start, end)
+    df=pdr.DataReader(ticker, data_source="yahoo",start=d11,end=d22)
 
     st.subheader("data from 2010-2021")
     st.write(df.describe())
