@@ -422,7 +422,7 @@ if(infoType == 'Prediction'):
     y_train=np.array(y_train)
 
     #load model
-    model=load_model('keras_model.h5')
+    model=Ridge(alpha=0)
     past_100_days=data_train.tail(100)
     final_df=past_100_days.append(data_test, ignore_index=True)
     input_data=scaler.fit_transform(final_df)
