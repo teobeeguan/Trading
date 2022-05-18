@@ -456,6 +456,8 @@ if(infoType == 'Prediction'):
     plt.xlabel('Time')
     plt.ylabel('Price')
     plt.legend()
+    fig2.update_yaxes(side="right")
+    fig2.update_layout(height=800)
     config={
         'modeBarButtonsToAdd': ['drawline']
     }
