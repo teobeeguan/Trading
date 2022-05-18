@@ -368,14 +368,20 @@ if(infoType == 'Intraday'):
    key='download-csv'
     )
 if(infoType == 'Prediction'):
-    d11 = '1999-01-01'
-    d22 = '2021-12-31'
+    d11 = st.date_input(
+     "Choose the beginning date of training set",
+     datetime.date('1999-01-01'))
+    st.write('From:', d11)
+    d22 = st.date_input(
+     "Choose the end date of training set",
+     datetime.date('2021-12-31'))
+    st.write('To:', d22)
 
     st.title("stock prediction")
     user_input=ticker
     df=pdr.DataReader(ticker, data_source="yahoo",start=d11,end=d22)
 
-    st.subheader("data from 2010-2021")
+    st.subheader("data from 1999-2021")
     st.write(df.describe())
 
     st.subheader("CLOSING PRICE VS TIME CHART")
@@ -451,13 +457,5 @@ if(infoType == 'Prediction'):
     plt.ylabel('Price')
     plt.legend()
     st.pyplot(fig2)
-    d111 = st.date_input(
-     "Choose the beginning date",
-     datetime.date.today())
-    st.write('From:', d111)
-    d222 = st.date_input(
-     "Choose the end date",
-     datetime.date.today())
-    st.write('To:', d222)
-    ypred=pdr.DataReader(y_predicted, start=d111, end=d222)
+    y_pred=y_predicted.[-5]
     st.table(y_pred)
