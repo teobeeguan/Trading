@@ -328,11 +328,11 @@ if(infoType == 'Intraday'):
     inter=st.selectbox("Choose the interval",["1m","2m","5m","15m","30m","60m","90m","1d"])
     d1 = st.date_input(
      "Choose the beginning date",
-     datetime.date(2022, 4, 5))
+     datetime.date.today())
     st.write('From:', d1)
     d2 = st.date_input(
      "Choose the end date",
-     datetime.date(2022, 4, 7))
+     datetime.date.today())
     st.write('To:', d2)
 
     stock = yf.Ticker(ticker)
@@ -451,4 +451,13 @@ if(infoType == 'Prediction'):
     plt.ylabel('Price')
     plt.legend()
     st.pyplot(fig2)
-    st.table(y_predicted)
+    d111 = st.date_input(
+     "Choose the beginning date",
+     datetime.date.today())
+    st.write('From:', d111)
+    d222 = st.date_input(
+     "Choose the end date",
+     datetime.date.today())
+    st.write('To:', d222)
+    ypred=pdr.DataReader(y_predicted, start=d111, end=d222)
+    st.table(y_pred)
