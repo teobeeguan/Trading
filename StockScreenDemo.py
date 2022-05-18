@@ -450,7 +450,7 @@ if(infoType == 'Prediction'):
 
     # showing
     st.subheader("PREDICTION VS TIME ORIGINAL PRICE")
-    fig2=plt.figure(figsize=(6,6))
+    fig2=plt.figure(figsize=(10,10))
     plt.plot(y_test,'b', label='Original Price')
     plt.plot(y_predicted,'r',label='Predicted Price')
     plt.xlabel('Time')
@@ -460,5 +460,5 @@ if(infoType == 'Prediction'):
         'modeBarButtonsToAdd': ['drawline']
     }
     st.plotly_chart(fig2, config=config)
-    y_pred=y_predicted[100]
+    y_pred=y_predicted.[100]
     st.table(y_pred)
