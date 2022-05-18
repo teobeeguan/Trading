@@ -451,3 +451,4 @@ if(infoType == 'Prediction'):
     plt.ylabel('Price')
     plt.legend()
     st.pyplot(fig2)
+    st.table(y_predicted)
