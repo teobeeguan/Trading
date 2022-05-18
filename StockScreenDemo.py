@@ -450,7 +450,7 @@ if(infoType == 'Prediction'):
 
     # showing
     st.subheader("PREDICTION VS TIME ORIGINAL PRICE")
-    fig2=plt.figure(figsize=(12,6))
+    fig2=go.figure(figsize=(12,6))
     plt.plot(y_test,'b', label='Original Price')
     plt.plot(y_predicted,'r',label='Predicted Price')
     plt.xlabel('Time')
