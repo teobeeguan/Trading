@@ -459,6 +459,6 @@ if(infoType == 'Prediction'):
     config={
         'modeBarButtonsToAdd': ['drawline']
     }
-    st.plotly_chart(fig2, se_container_width=True, config=config)
-    y_pred=y_predicted[-10]
+    st.plotly_chart(fig2, config=config)
+    y_pred=y_predicted[100]
     st.table(y_pred)
