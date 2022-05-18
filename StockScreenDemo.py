@@ -456,11 +456,9 @@ if(infoType == 'Prediction'):
     plt.xlabel('Time')
     plt.ylabel('Price')
     plt.legend()
-    fig2.update_yaxes(side="right")
-    fig2.update_layout(height=800)
     config={
         'modeBarButtonsToAdd': ['drawline']
     }
     st.plotly_chart(fig2, se_container_width=True, config=config)
-    y_pred=y_predicted[-5]
+    y_pred=y_predicted[-10]
     st.table(y_pred)
