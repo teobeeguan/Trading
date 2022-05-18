@@ -370,11 +370,11 @@ if(infoType == 'Intraday'):
 if(infoType == 'Prediction'):
     d11 = st.date_input(
      "Choose the beginning date of training set",
-     datetime.date(1999,01,01))
+     datetime.date(1999, 01, 01))
     st.write('From:', d11)
     d22 = st.date_input(
      "Choose the end date of training set",
-     datetime.date(2021,12,31))
+     datetime.date(2021, 12, 31))
     st.write('To:', d22)
 
     st.title("stock prediction")
