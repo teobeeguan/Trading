@@ -456,6 +456,6 @@ if(infoType == 'Prediction'):
     plt.xlabel('Time')
     plt.ylabel('Price')
     plt.legend()
-    st.pyplot(fig2)
+    st.plotly_chart(fig2)
     y_pred=y_predicted[-5]
     st.table(y_pred)
