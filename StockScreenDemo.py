@@ -22,7 +22,7 @@ from sklearn.preprocessing import MinMaxScaler
 st.sidebar.image("https://slm-sa.com/wp-content/uploads/2020/01/LogoSLM-IF-1.png")
 st.sidebar.write("""
 # RIVACUBE SCREENER 
-## First Jet for simple analysis
+## Dashboard for Data Visualization
 *By SLM for Rivaldi Project*
 
 """)
