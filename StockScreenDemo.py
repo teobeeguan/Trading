@@ -561,8 +561,13 @@ if(infoType == 'Sentiment'):
         # Plot a bar chart with plotly
         fig = px.bar(mean_scores, x=mean_scores.index, y='sentiment_score', title = ticker + ' Daily Sentiment Scores')
         return fig # instead of using fig.show(), we return fig and turn it into a graphjson object for displaying in web page later
-    st.header("Sentiment Analysis for Stocks related news")
+    st.header("Sentiment Analysis for Stocks related news from FinViz")
     st.subheader("Hourly and Daily Sentiment of {} Stock".format(ticker))
+    description = '''
+    The news headlines for the sentiment score are obtained from the FinViz website.
+    The following charts averages the sentiment scores of {} stock hourly and daily.
+    While the table below gives  the most recent headlines of the stock with the negative, neutral, positive and an aggregated sentiment score.
+    '''.format(ticker)
     news_table = get_news(ticker)
     parsed_news_df = parse_news(news_table)
     parsed_and_scored_news = score_news(parsed_news_df)
@@ -570,12 +575,7 @@ if(infoType == 'Sentiment'):
     fig_daily = plot_daily_sentiment(parsed_and_scored_news, ticker)
     st.plotly_chart(fig_hourly)
     st.plotly_chart(fig_daily)
-    description = '''
-    The above chart averages the sentiment scores of {} stock hourly and daily.
-    The table below gives each of the most recent headlines of the stock and the negative, neutral, positive and an aggregated sentiment score.
-    The news headlines are obtained from the FinViz website.
-    Sentiments are given by the nltk.sentiment.vader Python library.
-    '''.format(ticker)
+
  
     st.write(description)
     st.table(parsed_and_scored_news)
