@@ -562,7 +562,7 @@ if(infoType == 'Sentiment'):
         # Plot a bar chart with plotly
         fig = px.bar(mean_scores, x=mean_scores.index, y='sentiment_score', title = ticker + ' Daily Sentiment Scores')
         return fig # instead of using fig.show(), we return fig and turn it into a graphjson object for displaying in web page later
-    st.header("Sentiment Analysis for Stocks related news from FinViz")
+    st.header("Stocks Sentiment based on news from FinViz")
     st.subheader("Hourly and Daily Sentiment of {} Stock".format(ticker))
     description = '''
     The news headlines for the sentiment score are obtained from the FinViz website.
