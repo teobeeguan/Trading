@@ -10,3 +10,6 @@ yahoo_fin
 keras
 tensorflow
 sklearn
+nltk
+urllib3
+bs4
