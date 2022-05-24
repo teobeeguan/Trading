@@ -476,6 +476,7 @@ if(infoType == 'Prediction'):
     predf2=y_predicted[-5:]
     
     st.table(predf1)
+    st.table(predf2)
     
 if(infoType == 'Sentiment'):
     
