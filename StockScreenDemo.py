@@ -471,8 +471,8 @@ if(infoType == 'Prediction'):
         'modeBarButtonsToAdd': ['drawline']
     }
     st.plotly_chart(fig2, config=config)
-    y_pred=y_predicted.tail()
-    st.table(y_pred)
+    y_pred=[y_predicted,x_test]
+    st.table(y_pred.tail())
     
 if(infoType == 'Sentiment'):
     
