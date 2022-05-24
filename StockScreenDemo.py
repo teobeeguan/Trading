@@ -385,14 +385,14 @@ if(infoType == 'Prediction'):
     st.write('From:', d11)
     d22 = st.date_input(
      "Choose the end date of training set",
-     datetime.date(2021, 12, 31))
+     datetime.date.today()
     st.write('To:', d22)
 
     st.title("stock prediction")
     user_input=ticker
     df=pdr.DataReader(ticker, data_source="yahoo",start=d11,end=d22)
 
-    st.subheader("data from 1999-2021")
+    st.subheader("data from 1999")
     st.write(df.describe())
 
     st.subheader("CLOSING PRICE VS TIME CHART")
@@ -471,8 +471,8 @@ if(infoType == 'Prediction'):
         'modeBarButtonsToAdd': ['drawline']
     }
     st.plotly_chart(fig2, config=config)
-
-    st.table(y_predicted[-5:])
+    st.subheader("Comparing last five predicted and real prices")
+    st.table(y_test[-5],y_predicted[-5:])
     
 if(infoType == 'Sentiment'):
     
