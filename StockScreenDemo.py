@@ -472,7 +472,9 @@ if(infoType == 'Prediction'):
     }
     st.plotly_chart(fig2, config=config)
     st.subheader("Comparing last five predicted and real prices")
-    predf=pd.DataFrame({'Reality': y_test[-5], 'Prediction': y_predicted[-5:]})
+    predf1=y_test[-5:]
+    predf2=y_predicted[-5:]
+    predf=predf1 + predf2
     st.table(predf)
     
 if(infoType == 'Sentiment'):
