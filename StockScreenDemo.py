@@ -562,7 +562,7 @@ if(infoType == 'Sentiment'):
         fig = px.bar(mean_scores, x=mean_scores.index, y='sentiment_score', title = ticker + ' Daily Sentiment Scores')
         return fig # instead of using fig.show(), we return fig and turn it into a graphjson object for displaying in web page later
     st.header("Sentiment Analysis for Stocks related news")
-    st.subheader("Hourly and Daily Sentiment of {} Stock”.format(ticker))
+    st.subheader("Hourly and Daily Sentiment of {} Stock”.format(ticker)
     news_table = get_news(ticker)
     parsed_news_df = parse_news(news_table)
     parsed_and_scored_news = score_news(parsed_news_df)
