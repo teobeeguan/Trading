@@ -474,10 +474,7 @@ if(infoType == 'Prediction'):
     st.subheader("Comparing last five predicted and real prices")
     predf1=y_test[-5:]
     predf2=y_predicted[-5:]
-    
-    st.table(predf1)
-    st.table(predf2)
-    
+
 if(infoType == 'Sentiment'):
     
     def get_news(ticker):
