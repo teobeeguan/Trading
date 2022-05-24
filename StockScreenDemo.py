@@ -472,7 +472,7 @@ if(infoType == 'Prediction'):
     }
     st.plotly_chart(fig2, config=config)
 
-    st.table(y_predicted.tail())
+    st.table(y_predicted)
     
 if(infoType == 'Sentiment'):
     
