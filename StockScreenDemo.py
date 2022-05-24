@@ -385,7 +385,7 @@ if(infoType == 'Prediction'):
     st.write('From:', d11)
     d22 = st.date_input(
      "Choose the end date of training set",
-     datetime.date.today()
+     datetime.date.today())
     st.write('To:', d22)
 
     st.title("stock prediction")
