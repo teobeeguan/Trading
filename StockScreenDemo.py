@@ -474,8 +474,8 @@ if(infoType == 'Prediction'):
     st.subheader("Comparing last five predicted and real prices")
     predf1=y_test[-5:]
     predf2=y_predicted[-5:]
-    predf=predf1 + predf2
-    st.table(predf)
+    
+    st.table(predf1)
     
 if(infoType == 'Sentiment'):
     
