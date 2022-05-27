@@ -580,5 +580,16 @@ if(infoType == 'Sentiment'):
  
     st.write(description)
     st.table(parsed_and_scored_news)
+    def convert_df(df):
+        return df.to_csv().encode('utf-8')
+
+    csv = parsed_and_scored_news
+    st.download_button(
+   "Press to Download",
+   csv,
+   "file.csv",
+   "text/csv",
+   key='download-csv'
+    )
         
         
