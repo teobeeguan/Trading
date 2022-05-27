@@ -583,7 +583,7 @@ if(infoType == 'Sentiment'):
  
     st.write(description)
     st.table(parsed_and_scored_news)
-    csv = parsed_and_scored_news
+    csv = convert_df(parsed_and_scored_news)
     st.download_button(
    "Press to Download",
    csv,
@@ -591,3 +591,4 @@ if(infoType == 'Sentiment'):
    "text/csv",
    key='download-csv'
     )
+  
