@@ -595,7 +595,7 @@ if(infoType == 'Sentiment'):
 if(infoType == 'ESG'):
 
    esg_data = pd.DataFrame()
-   stock_df = stock_name.sustainability.T
+   stock_df = stock.sustainability.T
    stock_df['symbol'] = ticker
    esg_data = esg_data.append(ticker_df)
    time.sleep(randint(2,8))
