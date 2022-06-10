@@ -27,6 +27,7 @@ import json # for graph plotting in website
 import nltk
 nltk.downloader.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import plotly.express as px
 
 
 
@@ -613,3 +614,8 @@ if(infoType == 'ESG'):
    "text/csv",
    key='download-csv'
     )
+   df_esg = pd.DataFrame(dict(
+       r=[new_esg_df[3], new_esg_df[4], new_esg_df[6]],
+       theta=['socialScore','governanceScore','environmentScore',]))
+   fig = px.line_polar(df_esg, r='r', theta='theta', line_close=True)
+   st.plotly_chart(fig)
