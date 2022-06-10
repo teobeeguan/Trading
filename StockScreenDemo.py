@@ -604,6 +604,11 @@ if(infoType == 'ESG'):
    def convert_df(df):
         return df.to_csv().encode('utf-8')
    st.header("ESG Stock Analysis")
+   Description2 = '''
+       The ESG score is obtained from the Yahoo Finance website.
+       The following chart gives the overall three ESG score of {} stock
+       While the table gives  the ESG Performance given from the website.
+       '''.format(ticker)
    st.write(Description2)
    st.subheader("ESG Score Table")
    st.table(new_esg_df)
@@ -616,11 +621,7 @@ if(infoType == 'ESG'):
    key='download-csv'
     )
    st.subheader("ESG Radar")
-   Description2 = '''
-       The ESG score is obtained from the Yahoo Finance website.
-       The following chart gives the overall three ESG score of {} stock
-       While the table gives  the ESG Performance given from the website.
-       '''.format(ticker)
+
    
    df_esg = pd.DataFrame(dict(
        r=[new_esg_df.iloc[0,2], new_esg_df.iloc[0,3], new_esg_df.iloc[0,5]],
