@@ -592,23 +592,22 @@ if(infoType == 'Sentiment'):
    "text/csv",
    key='download-csv'
     )
-  
 if(infoType == 'ESG'):
 
-	esg_data = pd.DataFrame()
-	stock_df = stock_name.sustainability.T
-	stock_df['symbol'] = ticker
-	esg_data = esg_data.append(ticker_df)
-	time.sleep(randint(2,8))
-	new_esg_df = esg_data[['symbol', 'socialScore', 'governanceScore', 'totalEsg', 'environmentScore']]
+   esg_data = pd.DataFrame()
+   stock_df = stock_name.sustainability.T
+   stock_df['symbol'] = ticker
+   esg_data = esg_data.append(ticker_df)
+   time.sleep(randint(2,8))
+   new_esg_df = esg_data[['symbol', 'socialScore', 'governanceScore', 'totalEsg', 'environmentScore']]
 	
-	st.write("ESG Score Table")
-    	st.table(new_esg_df)
-    	csv = convert_df(new_esg_df)
-    	st.download_button(
-   	"Press to Download",
-   	csv,
-   	"file.csv",
-   	"text/csv",
-   	key='download-csv'
+   st.write("ESG Score Table")
+   st.table(new_esg_df)
+   csv = convert_df(new_esg_df)
+   st.download_button(
+   "Press to Download",
+   csv,
+   "file.csv",
+   "text/csv",
+   key='download-csv'
     )
