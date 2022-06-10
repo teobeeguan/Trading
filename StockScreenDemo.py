@@ -598,7 +598,7 @@ if(infoType == 'ESG'):
    stock_df = stock.sustainability.T
    stock_df['symbol'] = ticker
    esg_data = esg_data.append(stock_df)
-   time.sleep(randint(2,8))
+
    new_esg_df = esg_data[['symbol', 'socialScore', 'governanceScore', 'totalEsg', 'environmentScore']]
 	
    st.write("ESG Score Table")
