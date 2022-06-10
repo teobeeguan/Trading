@@ -602,6 +602,16 @@ if(infoType == 'ESG'):
 
    def convert_df(df):
         return df.to_csv().encode('utf-8')
+   st.write("ESG Data Table")
+   st.table(esg_data)
+   csv = convert_df(esg_data)
+   st.download_button(
+   "Press to Download",
+   csv,
+   "file.csv",
+   "text/csv",
+   key='download-csv'
+    )
    st.write("ESG Score Table")
    st.table(new_esg_df)
    csv = convert_df(new_esg_df)
