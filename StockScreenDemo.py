@@ -598,20 +598,11 @@ if(infoType == 'ESG'):
    stock_df = stock.sustainability.T
    stock_df['symbol'] = ticker
    esg_data = esg_data.append(stock_df)
-   new_esg_df = esg_data[['symbol', 'socialScore', 'governanceScore', 'totalEsg', 'environmentScore']]
+   new_esg_df = esg_data[['symbol', 'peerGroup', 'socialScore', 'governanceScore', 'totalEsg', 'environmentScore', 'esgPerformance']]
 
    def convert_df(df):
         return df.to_csv().encode('utf-8')
-   st.write("ESG Data Table")
-   st.table(esg_data)
-   csv = convert_df(esg_data)
-   st.download_button(
-   "Press to Download",
-   csv,
-   "file.csv",
-   "text/csv",
-   key='download-csv'
-    )
+
    st.write("ESG Score Table")
    st.table(new_esg_df)
    csv = convert_df(new_esg_df)
