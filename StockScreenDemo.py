@@ -614,8 +614,15 @@ if(infoType == 'ESG'):
    "text/csv",
    key='download-csv'
     )
+   st.write("ESG Radar")
+   Description2 = '''
+       The ESG score is obtained from the Yahoo Finance website.
+       The following chart gives the overall three ESG score of {} stock
+       While the table gives  the ESG Performance given from the website.
+       '''.format(ticker)
+   st.write(Description2)
    df_esg = pd.DataFrame(dict(
        r=[new_esg_df.iloc[0,2], new_esg_df.iloc[0,3], new_esg_df.iloc[0,5]],
-       theta=['socialScore','governanceScore','environmentScore',]))
+       theta=['Social Score','Governance Score','Environment Score',]))
    fig = px.line_polar(df_esg, r='r', theta='theta', line_close=True)
    st.plotly_chart(fig)
