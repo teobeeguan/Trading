@@ -20,6 +20,7 @@ from keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
+from random import randint 
 import plotly.express as px
 import json # for graph plotting in website
 # NLTK VADER for sentiment analysis
@@ -52,7 +53,7 @@ traday = pdr.DataReader(ticker, data_source="yahoo")
 
 infoType = st.sidebar.radio(
         "Choose an analysis type",
-        ('Fundamental', 'Technical', 'Intraday', 'Prediction', 'Sentiment')
+        ('Fundamental', 'Technical', 'Intraday', 'Prediction', 'Sentiment', 'ESG')
     )
 
 stock = yf.Ticker(ticker)
@@ -592,3 +593,22 @@ if(infoType == 'Sentiment'):
    key='download-csv'
     )
   
+if(infoType == 'ESG'):
+
+	esg_data = pd.DataFrame()
+	stock_df = stock_name.sustainability.T
+	stock_df['symbol'] = ticker
+	esg_data = esg_data.append(ticker_df)
+	time.sleep(randint(2,8))
+	new_esg_df = esg_data[['symbol', 'socialScore', 'governanceScore', 'totalEsg', 'environmentScore']]
+	
+	st.write("ESG Score Table")
+    	st.table(new_esg_df)
+    	csv = convert_df(new_esg_df)
+    	st.download_button(
+   	"Press to Download",
+   	csv,
+   	"file.csv",
+   	"text/csv",
+   	key='download-csv'
+    )
