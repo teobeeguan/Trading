@@ -600,8 +600,8 @@ if(infoType == 'ESG'):
    esg_data = esg_data.append(stock_df)
    new_esg_df = esg_data[['symbol', 'socialScore', 'governanceScore', 'totalEsg', 'environmentScore']]
 
-   def convert_df(df):
-	return df.to_csv().encode('utf-8')
+    def convert_df(df):
+        return df.to_csv().encode('utf-8')
    st.write("ESG Score Table")
    st.table(new_esg_df)
    csv = convert_df(new_esg_df)
