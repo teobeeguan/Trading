@@ -1,4 +1,6 @@
-yfinance==0.1.55
+yfinance==0.1.65
 streamlit==0.76.0
 pandas==1.2.1
 plotly==4.14.3
+click==8.0.4
+protobuf==3.20
