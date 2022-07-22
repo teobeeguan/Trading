@@ -632,4 +632,4 @@ if(infoType == 'ESG'):
 
 if(infoType == 'Media'):
 	p = open("Media/mediaDash Twitter ADOBE.mhtml.eml")
-	components.mhtml(p.read())
+	components.html(p.read())
