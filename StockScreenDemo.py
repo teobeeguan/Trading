@@ -11,6 +11,7 @@ from pandas_datareader import data as pdr
 import investpy
 import yfinance as yf
 import streamlit as st
+import streamlit.components.v1 as components
 import datetime as dt
 import numpy as np
 import matplotlib.pyplot as plt
@@ -54,7 +55,7 @@ traday = pdr.DataReader(ticker, data_source="yahoo")
 
 infoType = st.sidebar.radio(
         "Choose an analysis type",
-        ('Fundamental', 'Technical', 'Intraday', 'Prediction', 'Sentiment', 'ESG')
+        ('Fundamental', 'Technical', 'Intraday', 'Prediction', 'Sentiment', 'Media', 'ESG')
     )
 
 stock = yf.Ticker(ticker)
