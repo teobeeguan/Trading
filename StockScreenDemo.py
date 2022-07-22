@@ -629,3 +629,7 @@ if(infoType == 'ESG'):
        theta=['Social Score','Governance Score','Environment Score',]))
    fig = px.line_polar(df_esg, r='r', theta='theta', line_close=True)
    st.plotly_chart(fig)
+
+if(infoType == 'Media'):
+	p = open("Media/mediaDash Twitter ADOBE.mhtml.eml")
+	components.mhtml(p.read())
