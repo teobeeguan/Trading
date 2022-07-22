@@ -643,4 +643,4 @@ if(infoType == 'Media'):
     # Displaying File
     st.markdown(pdf_display, unsafe_allow_html=True)
    
-   displayPDF('Media/mediaDash Twitter ADOBE.pdf')
+   displayPDF('Media/Twitter_ADOBE.pdf')
