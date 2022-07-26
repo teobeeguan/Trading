@@ -645,4 +645,4 @@ if(infoType == 'Media'):
    
    #displayPDF("Media/Twitter_ADOBE.pdf")
    p = open("Media/Impact_period2.html", 'r')
-   components.html(p.read())
+   components.iframe(p.read())
