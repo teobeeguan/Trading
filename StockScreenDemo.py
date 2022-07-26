@@ -644,5 +644,5 @@ if(infoType == 'Media'):
         #return st.markdown(pdf_display, unsafe_allow_html=True)
    
    #displayPDF("Media/Twitter_ADOBE.pdf")
-   p = open("Media/Impact_period2.html")
+   p = open("Media/Impact_period2.html", 'r')
    components.html(p.read())
