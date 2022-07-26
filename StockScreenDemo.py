@@ -632,15 +632,17 @@ if(infoType == 'ESG'):
    st.plotly_chart(fig)
 
 if(infoType == 'Media'):
-   def displayPDF(file):
+   #def displayPDF(file):
 	# Opening file from file path
-        with open(file, "rb") as f:
-            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        #with open(file, "rb") as f:
+            #base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
         # Embedding PDF in HTML
-        pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
+        #pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
 
         # Displaying File
-        return st.markdown(pdf_display, unsafe_allow_html=True)
+        #return st.markdown(pdf_display, unsafe_allow_html=True)
    
-   displayPDF("Media/Twitter_ADOBE.pdf")
+   #displayPDF("Media/Twitter_ADOBE.pdf")
+   p = open("Media/Impact_period2.html")
+   components.html(p.read())
