@@ -632,6 +632,8 @@ if(infoType == 'ESG'):
    st.plotly_chart(fig)
 
 if(infoType == 'Media'):
+	
+   st.title('Under Construction')
    #def displayPDF(file):
 	# Opening file from file path
         #with open(file, "rb") as f:
