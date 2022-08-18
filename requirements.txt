@@ -9,6 +9,7 @@ matplotlib
 yahoo_fin
 keras
 tensorflow
+st.metrics
 sklearn
 nltk
 urllib3
