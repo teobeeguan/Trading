@@ -163,7 +163,7 @@ if(infoType == 'Technical'):
     st.title('Technical Indicators')
     st.subheader('Moving Average')
     
-    coMA1, coMA2 = st.columns(2)
+    coMA1, coMA2 = st_beta.columns(2)
     
     with coMA1:
         numYearMA = st.number_input('Insert period (Year): ', min_value=1, max_value=10, value=2, key=0)    
