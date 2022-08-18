@@ -23,6 +23,7 @@ from sklearn.preprocessing import MinMaxScaler
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from random import randint 
+from st.metrics import metric, metric_row
 import plotly.express as px
 import json # for graph plotting in website
 # NLTK VADER for sentiment analysis
@@ -163,7 +164,7 @@ if(infoType == 'Technical'):
     st.title('Technical Indicators')
     st.subheader('Moving Average')
     
-    coMA1, coMA2 = st.beta_columns(2)
+    coMA1, coMA2 = st.columns(2)
     
     with coMA1:
         numYearMA = st.number_input('Insert period (Year): ', min_value=1, max_value=10, value=2, key=0)    
@@ -286,7 +287,7 @@ if(infoType == 'Technical'):
     st.plotly_chart(figMACD, use_container_width=True)
     
     st.subheader('Bollinger Band')
-    coBoll1, coBoll2 = st.beta_columns(2)
+    coBoll1, coBoll2 = st.columns(2)
     with coBoll1:
         numYearBoll = st.number_input('Insert period (Year): ', min_value=1, max_value=10, value=2, key=6) 
         
