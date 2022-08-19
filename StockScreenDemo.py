@@ -370,6 +370,7 @@ if(infoType == 'Intraday'):
     
     st.subheader('Intraday per dates')
     Intraday = pdr.DataReader(ticker, data_source="yahoo",start=d1,end=d2)
+    
     st.table(Intraday)
     def convert_df(df):
         return df.to_csv().encode('utf-8')
@@ -378,7 +379,7 @@ if(infoType == 'Intraday'):
     st.download_button(
    "Press to Download",
    csv,
-   "file.csv",
+   "file2.csv",
    "text/csv",
    key='download-csv'
     )
