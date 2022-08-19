@@ -382,6 +382,7 @@ if(infoType == 'Intraday'):
    "text/csv",
    key='download-csv'
     )
+
 if(infoType == 'Prediction'):
     d11 = st.date_input(
      "Choose the beginning date of training set",
