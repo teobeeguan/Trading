@@ -379,9 +379,9 @@ if(infoType == 'Intraday'):
     st.download_button(
    "Press to Download",
    csv,
-   "file2.csv",
+   "file.csv",
    "text/csv",
-   key='download-csv'
+   key='download2-csv'
     )
 
 if(infoType == 'Prediction'):
