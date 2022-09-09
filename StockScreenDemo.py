@@ -46,8 +46,10 @@ st.sidebar.write("""
 
 snp500 = pd.read_csv("Datasets/SP500.csv")
 cac40 = pd.read_csv("Datasets/CAC40.csv")
+ftse100 = pd.read_csv("Datasets/FTSE100.csv")
 symbols = snp500['Symbol'].sort_values().tolist()
 symbolsCAC40 = cac40['Symbol'].sort_values().tolist()
+symbolsFTSE100 = ftse100['Symbol'].sort_values().tolist()
 # for extracting data from finviz
 finviz_url = 'https://finviz.com/quote.ashx?t='
 
