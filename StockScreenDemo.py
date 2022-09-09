@@ -10,6 +10,7 @@ import datetime
 from pandas_datareader import data as pdr
 import investpy
 import yaml
+import authenticate
 import yfinance as yf
 import streamlit as st
 import base64
