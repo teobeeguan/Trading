@@ -57,7 +57,7 @@ if Universe == 'S&P 500':
      ticker = st.sidebar.selectbox(
     'Choose a S&P 500 Stock',
      symbols)
- elif Universe == 'CAC 40':
+elif Universe == 'CAC 40':
      ticker = st.sidebar.selectbox(
     'Choose a CAC 40 Stock',
      symbolsCAC40)
