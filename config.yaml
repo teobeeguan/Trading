@@ -1,0 +1,15 @@
+
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    dbaldwin:
+      email: SLM@SLM.com
+      name: SLM
+      password: Hello123
+    
+preauthorized:
+  emails:
+  - melsby@gmail.com
