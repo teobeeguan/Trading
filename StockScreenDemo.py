@@ -9,6 +9,7 @@ import pandas as pd
 import datetime
 from pandas_datareader import data as pdr
 import investpy
+import yaml
 import yfinance as yf
 import streamlit as st
 import base64
