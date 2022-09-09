@@ -54,17 +54,11 @@ Universe = st.radio(
      ('S&P 500', 'CAC 40', 'FTSE 100'))
 
 if Universe == 'S&P 500':
-     ticker = st.sidebar.selectbox(
-    'Choose a S&P 500 Stock',
-     symbols)
+	ticker = st.sidebar.selectbox('Choose a S&P 500 Stock',symbols)
 elif Universe == 'CAC 40':
-     ticker = st.sidebar.selectbox(
-    'Choose a CAC 40 Stock',
-     symbolsCAC40)
+	ticker = st.sidebar.selectbox('Choose a CAC 40 Stock',symbolsCAC40)
 elif Universe == 'FTSE 100':
-     ticker = st.sidebar.selectbox(
-    'Choose a FTSE 100 Stock',
-     symbolsFTSE100)
+	ticker = st.sidebar.selectbox('Choose a FTSE 100 Stock',symbolsFTSE100)
 traday = pdr.DataReader(ticker, data_source="yahoo")
 
 
