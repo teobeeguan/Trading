@@ -51,8 +51,7 @@ names=["SLM"]
 usernames=["SLMIF"]
 passwords=["Hello123"]
 
-authenticator = stauth.Authenticate(names, usernames, passwords,
-    "dashboard", "abcdef", cookie_expiry_days=30)
+authenticator = stauth.Authenticate(names, usernames, passwords)
 name, authentication_status = authenticator.login("Login","sidebar")
 if authentication_status:
  st.write("Welcome *%s*" % (name))
