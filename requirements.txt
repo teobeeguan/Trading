@@ -16,3 +16,7 @@ nltk
 urllib3
 bs4
 prophet
+PyJWT
+bcrypt
+PyYAML
+extra-streamlit-components
