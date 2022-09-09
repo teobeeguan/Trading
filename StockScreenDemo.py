@@ -49,7 +49,7 @@ names = ['SLM','AT']
 usernames = ['SLM','ATSLM']
 passwords = ['Hello123','Hola123']
 #hashed_passwords = stauth.hasher(passwords).generate()
-authenticator = stauth.authenticate(names,usernames,passwords,'cookie_name', 'signature_key',cookie_expiry_days=30)
+authenticator = stauth.Authenticate(names,usernames,passwords,'cookie_name', 'signature_key',cookie_expiry_days=30)
 name, authentication_status = authenticator.login('Login','sidebar')
 if authentication_status:
  st.write("Welcome *%s*" % (name))
