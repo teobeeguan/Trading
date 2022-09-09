@@ -18,5 +18,5 @@ bs4
 prophet
 PyJWT
 bcrypt
-PyYAML
+PyYAML >= 5.3.1
 extra-streamlit-components
