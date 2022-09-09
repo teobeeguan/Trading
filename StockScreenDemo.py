@@ -45,19 +45,7 @@ st.sidebar.write("""
 
 """)
 
-names = ['SLM','AT']
-usernames = ['SLM','ATSLM']
-passwords = ['Hello123','Hola123']
-#hashed_passwords = stauth.hasher(passwords).generate()
-authenticator = stauth.authenticate(names,usernames,passwords)
-name, authentication_status = authenticator.login('Login','sidebar')
-if authentication_status:
- st.write("Welcome *%s*" % (name))
- # your application
-elif authentication_status == False:
- st.error("Username/password is incorrect")
-elif authentication_status == None:
- st.warning("Please enter your username and password")
+
 
 snp500 = pd.read_csv("Datasets/SP500.csv")
 cac40 = pd.read_csv("Datasets/CAC40.csv")
@@ -68,7 +56,7 @@ symbolsFTSE100 = ftse100['Symbol'].sort_values().tolist()
 # for extracting data from finviz
 finviz_url = 'https://finviz.com/quote.ashx?t='
 
-Universe = st.radio(
+Universe = st.sidebar.radio(
      "Select your Universe of Stock",
      ('S&P 500', 'CAC 40', 'FTSE 100'))
 
