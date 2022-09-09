@@ -45,16 +45,15 @@ st.sidebar.write("""
 
 """)
 
-names = ['SLM','AT']
-usernames = ['SLM','ATSLM']
-passwords = ['Hello123','Hola123']
-#hashed_passwords = stauth.hasher(passwords).generate()
-authenticator = stauth.Authenticate(
-config[‘credentials’],
-config[‘cookie’][‘name’],
-config[‘cookie’][‘key’],
-config[‘cookie’][‘expiry_days’]),
-config[‘preauthorized’]
+with open('../config.yaml') as file:
+    config = yaml.load(file, Loader=SafeLoader)
+
+authenticator = Authenticate(
+    config['credentials'],
+    config['cookie']['name'],
+    config['cookie']['key'],
+    config['cookie']['expiry_days'],
+    config['preauthorized']
 )
 name, authentication_status = authenticator.login('Login','sidebar')
 if authentication_status:
