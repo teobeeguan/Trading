@@ -46,17 +46,13 @@ st.sidebar.write("""
 
 """)
 
-with open("config.yaml") as file:
-    config = yaml.safe_load(file)
+#---User--Autenthification
+names=["SLM"]
+usernames=["SLMIF"]
+passawords=["Hello123"]
 
-authenticator = stauth.authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
-name, authentication_status = authenticator.login('Login','sidebar')
+authenticator = stauth.Authenticate(names, usernames, passwords, "Rivacube_dashboard", "abcdef", cookie_expiry_days=30)
+name, authentication_status = authenticator.login("Login","sidebar")
 if authentication_status:
  st.write("Welcome *%s*" % (name))
  # your application
