@@ -47,7 +47,7 @@ st.sidebar.write("""
 """)
 
 with open("config.yaml") as file:
-    config = yaml.load(file, Loader=SafeLoader)
+    config = yaml.safe_load(file)
 
 authenticator = Authenticate(
     config['credentials'],
