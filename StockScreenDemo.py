@@ -49,7 +49,7 @@ st.sidebar.write("""
 with open("config.yaml") as file:
     config = yaml.safe_load(file)
 
-authenticator = authenticate(
+authenticator = stauth.authenticate(
     config['credentials'],
     config['cookie']['name'],
     config['cookie']['key'],
