@@ -50,13 +50,7 @@ st.sidebar.write("""
 with open("config.yaml") as file:
     config = yaml.safe_load(file)
 
-authenticator = authenticate(
-    config['credentials'],
-    config['cookie']['name'],
-    config['cookie']['key'],
-    config['cookie']['expiry_days'],
-    config['preauthorized']
-)
+authenticator = authenticate(config['credentials'],config['cookie']['name'],config['cookie']['key'],config['cookie']['expiry_days'],config['preauthorized'])
 name, authentication_status = authenticator.login('Login','sidebar')
 if authentication_status:
  st.write("Welcome *%s*" % (name))
