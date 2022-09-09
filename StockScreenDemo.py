@@ -14,6 +14,7 @@ import streamlit as st
 import base64
 import streamlit.components.v1 as components
 import datetime as dt
+import streamlit_authenticator as stauth
 import numpy as np
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
@@ -43,6 +44,20 @@ st.sidebar.write("""
 *By SLM for Rivaldi Project*
 
 """)
+
+names = ['SLM','AT']
+usernames = ['SLM','ATSLM']
+passwords = ['Hello123','Hola123']
+hashed_passwords = stauth.hasher(passwords).generate()
+authenticator = stauth.authenticate(names,usernames,hashed_passwords,'cookie_name', 'signature_key',cookie_expiry_days=30)
+name, authentication_status = authenticator.login('Login','sidebar')
+if authentication_status:
+ st.write(‘Welcome *%s*’ % (name))
+ # your application
+elif authentication_status == False:
+ st.error(‘Username/password is incorrect’)
+elif authentication_status == None:
+ st.warning(‘Please enter your username and password’)
 
 snp500 = pd.read_csv("Datasets/SP500.csv")
 cac40 = pd.read_csv("Datasets/CAC40.csv")
