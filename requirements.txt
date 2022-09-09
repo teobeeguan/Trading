@@ -1,6 +1,7 @@
 yfinance
 streamlit
 streamlit-metrics
+streamlit_authenticator
 pandas
 plotly
 investpy
