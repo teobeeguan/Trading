@@ -49,7 +49,7 @@ st.sidebar.write("""
 #---User--Autenthification
 names=["SLM"]
 usernames=["SLMIF"]
-passawords=["Hello123"]
+passwords=["Hello123"]
 
 authenticator = stauth.Authenticate(names, usernames, passwords, "Rivacube_dashboard", "abcdef", cookie_expiry_days=30)
 name, authentication_status = authenticator.login("Login","sidebar")
