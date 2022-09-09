@@ -47,11 +47,12 @@ st.sidebar.write("""
 """)
 
 #---User--Autenthification
-names=["SLM"]
-usernames=["SLMIF"]
-passwords=["Hello123"]
+names = ["Peter Parker", "Rebecca Miller"]
+usernames = ["pparker", "rmiller"]
+passwords=["Hello123", "Hello123"]
 
-authenticator = stauth.Authenticate(names, usernames, passwords)
+authenticator = stauth.Authenticate(names, usernames, passwords,
+    "sales_dashboard", "abcdef", cookie_expiry_days=30)
 name, authentication_status = authenticator.login("Login","sidebar")
 if authentication_status:
  st.write("Welcome *%s*" % (name))
