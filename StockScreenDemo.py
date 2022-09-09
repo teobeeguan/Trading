@@ -16,7 +16,6 @@ import base64
 import streamlit.components.v1 as components
 import datetime as dt
 import streamlit_authenticator as stauth
-from streamlit_authenticator import authenticate
 import numpy as np
 import matplotlib.pyplot as plt
 import plotly.graph_objects as go
@@ -50,7 +49,7 @@ st.sidebar.write("""
 with open("config.yaml") as file:
     config = yaml.safe_load(file)
 
-authenticator = stauth(
+authenticator = authenticate(
     config['credentials'],
     config['cookie']['name'],
     config['cookie']['key'],
