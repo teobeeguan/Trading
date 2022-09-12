@@ -628,7 +628,7 @@ if(infoType == 'Sentiment'):
         # Read the contents of the file into 'html'
         html = BeautifulSoup(response, 'html')
         # Find 'news-table' in the Soup and load it into 'news_table'
-        news_table = html.find(id='news-table')
+        news_table = html.find(id="news-table")
         return news_table
         # parse news into dataframe
     def parse_news(news_table):
