@@ -633,7 +633,7 @@ if(infoType == 'Sentiment'):
         # parse news into dataframe
     def parse_news(news_table):
         parsed_news = []
-	global parsed_news_df
+	parsed_news_df = []
         for x in news_table.findAll('tbody'):
             # read the text from each tr tag into text
             # get text from a only
