@@ -633,7 +633,7 @@ if(infoType == 'Sentiment'):
         # parse news into dataframe
     def parse_news(news_table):
         parsed_news = []
-	parsed_news_df = []
+
         for x in news_table.findAll('tbody'):
             # read the text from each tr tag into text
             # get text from a only
@@ -657,7 +657,7 @@ if(infoType == 'Sentiment'):
             columnsname = ['date', 'time', 'headline']
 
             # Convert the parsed_news list into a DataFrame called 'parsed_and_scored_news'
-            parsed_news_df = pd.DataFrame(parsed_news, columns=columnsname)
+	    parsed_news_df = pd.DataFrame(parsed_news, columns=columnsname)
         
             # Create a pandas datetime object from the strings in 'date' and 'time' column
             parsed_news_df['datetime'] = pd.to_datetime(parsed_news_df['date'] + ' ' + parsed_news_df['time'])
