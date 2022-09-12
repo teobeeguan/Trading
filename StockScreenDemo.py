@@ -637,7 +637,7 @@ if(infoType == 'Sentiment'):
         for x in news_table.findAll('tr'):
             # read the text from each tr tag into text
             # get text from a only
-            text = x.a.get_text() 
+            text = x.a.gettext() 
             # splite text in the td tag into a list 
             date_scrape = x.td.text.split()
             # if the length of 'date_scrape' is 1, load 'time' as the only element
