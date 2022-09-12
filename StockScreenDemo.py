@@ -25,7 +25,7 @@ from sklearn.preprocessing import MinMaxScaler
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from random import randint 
-import gettext
+import get_text
 import plotly.express as px
 import json # for graph plotting in website
 # NLTK VADER for sentiment analysis
@@ -638,7 +638,7 @@ if(infoType == 'Sentiment'):
         for x in news_table.findAll('tr'):
             # read the text from each tr tag into text
             # get text from a only
-            text = x.a.gettext() 
+            text = x.a.get_text() 
             # splite text in the td tag into a list 
             date_scrape = x.td.text.split()
             # if the length of 'date_scrape' is 1, load 'time' as the only element
