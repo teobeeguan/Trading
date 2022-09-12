@@ -25,6 +25,7 @@ from sklearn.preprocessing import MinMaxScaler
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from random import randint 
+import gettext
 import plotly.express as px
 import json # for graph plotting in website
 # NLTK VADER for sentiment analysis
