@@ -654,7 +654,7 @@ if(infoType == 'Sentiment'):
             # Append ticker, date, time and headline as a list to the 'parsed_news' list
             parsed_news.append([date, time, text])
 	    #Set column names
-	    columns = ['date', 'time', 'headline']
+            columns = ['date', 'time', 'headline']
 	    parsed_news_df = pd.DataFrame(parsed_news,columns=columns)
         
             # Create a pandas datetime object from the strings in 'date' and 'time' column
