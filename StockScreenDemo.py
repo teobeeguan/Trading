@@ -654,8 +654,6 @@ if(infoType == 'Sentiment'):
         
             # Set column names
             columnsname = ['date', 'time', 'headline']
-
-            # Convert the parsed_news list into a DataFrame called 'parsed_and_scored_news'
 	    parsed_news_df = pd.DataFrame(parsed_news, columns=columnsname)
         
             # Create a pandas datetime object from the strings in 'date' and 'time' column
