@@ -717,8 +717,8 @@ if(infoType == 'Sentiment'):
     While the table below gives  the most recent headlines of the stock with the negative, neutral, positive and an aggregated sentiment score.
     '''.format(ticker)
     news_table = get_news(ticker)
-    parsed_news_df = parse_news(news_table)
-    parsed_and_scored_news = score_news(parsed_news_df)
+    parsed_news_df2 = parse_news(news_table)
+    parsed_and_scored_news = score_news(parsed_news_df2)
     fig_hourly = plot_hourly_sentiment(parsed_and_scored_news, ticker)
     fig_daily = plot_daily_sentiment(parsed_and_scored_news, ticker)
     st.plotly_chart(fig_hourly)
