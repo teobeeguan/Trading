@@ -655,7 +655,7 @@ if(infoType == 'Sentiment'):
             parsed_news.append([date, time, text])
 	    #Set column names
             columns = ['date', 'time', 'headline']
-	    parsed_news_df = pd.DataFrame(parsed_news,columns=columns)
+            parsed_news_df = pd.DataFrame(parsed_news,columns=columns)
         
             # Create a pandas datetime object from the strings in 'date' and 'time' column
             parsed_news_df['datetime'] = pd.to_datetime(parsed_news_df['date'] + ' ' + parsed_news_df['time'])
