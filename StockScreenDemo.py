@@ -631,9 +631,10 @@ if(infoType == 'Sentiment'):
         news_table = html.find(id="news-table")
         return news_table
         # parse news into dataframe
+    parsed_news = []
+    parsed_news_df = pd.DataFrame(parsed_news)	
     def parse_news(news_table):
-        parsed_news = []
-	parsed_news_df = pd.DataFrame(parsed_news)
+
         for x in news_table.findAll('tbody'):
 	    # read the text from each tr tag into text
 	    # get text from a only
