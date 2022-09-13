@@ -786,7 +786,7 @@ if check_password():
        st.write(description)
        st.header("Vue temporelle du flux de tweet")
        st.subheader("Volume des tweets par jour du stock {}".format(ticker))
-       st.plotly_chart(Aaplprocfr)
+       st.plotly_chart(fig)
        #def displayPDF(file):
     	# ---Test with Display PDF Opening file from file path
             #with open(file, "rb") as f:
