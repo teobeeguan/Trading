@@ -774,7 +774,17 @@ if check_password():
 
     if(infoType == 'Media'):
     	
-       st.title('Under Construction')
+       st.title('MediaDash Twitter')
+       Aaplproc = pd.read_csv("Media/AAPL_preproc.csv")
+       Aaplprocfr = pd.DataFrame(Aaplproc,columns=['date','volume'])
+       description = '''Il y a plusieurs groupes sur les réseaux sociaux (Twitter, Facebook, etc…) où des investisseurs individuels 
+       échangent leurs avis et parviennent à créer des flux acheteurs ou vendeurs sur des titres. 
+       Cette force defrappe va s’organiser progressivement et pourrait même pallier le manque d’informations sur plusieurssociétés. 
+       De plus, l’impact des réseaux sociaux sur les décisions d’investissement est plus important lorsquele marché n’est pas efficient.
+       '''.format(ticker)
+       st.header("Vue temporelle du flux de tweet")
+       st.subheader("Volume des tweets par jour du stock {}".format(ticker))
+       st.bar_chart(Aaplprocfr)
        #def displayPDF(file):
     	# Opening file from file path
             #with open(file, "rb") as f:
