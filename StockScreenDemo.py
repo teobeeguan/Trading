@@ -793,7 +793,6 @@ if check_password():
        index_sent = dfAaplproc[1:10].values
        fig3 = px.bar(x=index_sent,
              y=dfAaplproc[1:10].sum(axis=1),
-             color=count_sent,
              color_continuous_scale=px.colors.sequential.Pinkyl,
              title='Sentiment volume')
        fig2 = px.bar(dfAaplproc[1:10].sum(axis=1))
