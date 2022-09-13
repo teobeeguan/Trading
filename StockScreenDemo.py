@@ -790,9 +790,9 @@ if check_password():
        st.plotly_chart(fig)
        st.header("Vue des Sentiments des tweets")
        st.subheader("Emotions qui ressortent le plus du stock {}".format(ticker))
-       index_sent = dfAaplproc[1:10].values
+       'CLASS_TYPE': dfAaplproc[1:10].values
        #fig3 = px.bar(dfAaplproc[1:10], x='index_sent', y='dfAaplproc[1:10].sum(axis=1)', color_continuous_scale=px.colors.sequential.Pinkyl, title='Sentiment volume')
-       fig2 = px.bar(dfAaplproc[1:10].sum(axis=1))
+       fig2 = px.bar(dfAaplproc[1:10].sum(axis=1), x= 'CLASS_TYPE')
        st.plotly_chart(fig2)
        #st.plotly_chart(fig3)
        #def displayPDF(file):
