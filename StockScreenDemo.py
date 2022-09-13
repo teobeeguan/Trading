@@ -792,7 +792,7 @@ if check_password():
        st.subheader("Emotions qui ressortent le plus du stock {}".format(ticker))
        index_sent = dfAaplproc.columns[1:10].values
        count_sent = [dfAaplproc[sent].value_counts()[1] for sent in index_sent]
-       fig3 = px.bar((x=index_sent,
+       fig3 = px.bar(x=index_sent,
              y=count_sent,
              color=count_sent,
              color_continuous_scale=px.colors.sequential.Pinkyl,
