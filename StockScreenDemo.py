@@ -775,7 +775,7 @@ if check_password():
     if(infoType == 'Media'):
     	
        st.title('MediaDash Twitter')
-       Aaplproc = pd.read_csv("Media/AAPL_preproc.csv")
+       Aaplproc = pd.read_csv("Media/AAPL_preproc.csv", sep=' ')
        st.table(Aaplproc)
        Aaplprocfr = pd.DataFrame(Aaplproc, columns=['date','volume'])
        fig = px.bar(Aaplprocfr, x='date', y='volume', title = ticker + ' Daily Volume tweet')
