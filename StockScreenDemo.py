@@ -790,8 +790,16 @@ if check_password():
        st.plotly_chart(fig)
        st.header("Vue des Sentiments des tweets")
        st.subheader("Emotions qui ressortent le plus du stock {}".format(ticker))
-       fig2 = px.bar(dfAaplproc[1:10].sum(axis=1), rot= '90')
+       index_sent = dfAaplproc.columns[1:10].values
+       count_sent = [dfAaplproc[sent].value_counts()[1] for sent in index_sent]
+       fig3 = px.bar((x=index_sent,
+             y=count_sent,
+             color=count_sent,
+             color_continuous_scale=px.colors.sequential.Pinkyl,
+             title='Sentiment volume')
+       fig2 = px.bar(dfAaplproc[1:10].sum(axis=1))
        st.plotly_chart(fig2)
+       st.plotly_chart(fig3)
        #def displayPDF(file):
     	# ---Test with Display PDF Opening file from file path
             #with open(file, "rb") as f:
