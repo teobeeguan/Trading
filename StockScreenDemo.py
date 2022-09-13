@@ -777,16 +777,18 @@ if check_password():
        st.title('MediaDash Twitter')
        Aaplproc = pd.read_csv("Media/AAPL_preproc.csv")
        Aaplprocfr = pd.DataFrame(Aaplproc,columns=['date','volume'])
+       fig = px.bar(Aaplprocfr, x='date', y='volume', title = ticker + ' Daily Volume tweet')
        description = '''Il y a plusieurs groupes sur les réseaux sociaux (Twitter, Facebook, etc…) où des investisseurs individuels 
        échangent leurs avis et parviennent à créer des flux acheteurs ou vendeurs sur des titres. 
        Cette force defrappe va s’organiser progressivement et pourrait même pallier le manque d’informations sur plusieurssociétés. 
        De plus, l’impact des réseaux sociaux sur les décisions d’investissement est plus important lorsquele marché n’est pas efficient.
        '''.format(ticker)
+       st.write(description)
        st.header("Vue temporelle du flux de tweet")
        st.subheader("Volume des tweets par jour du stock {}".format(ticker))
-       st.bar_chart(Aaplprocfr)
+       st.plotly_chart(Aaplprocfr)
        #def displayPDF(file):
-    	# Opening file from file path
+    	# ---Test with Display PDF Opening file from file path
             #with open(file, "rb") as f:
                 #base64_pdf = base64.b64encode(f.read()).decode('utf-8')
 
@@ -797,8 +799,7 @@ if check_password():
             #return st.markdown(pdf_display, unsafe_allow_html=True)
        
        #displayPDF("Media/Twitter_ADOBE.pdf")
-       p = open("Media/Impact_period2.html", 'r')
-       components.iframe(p.read())
+
     	
     if(infoType == 'DataSeer'):
     	
