@@ -83,8 +83,8 @@ def check_password():
         return True
 
 if check_password():
-    st.write("Here goes your normal Streamlit app...")
-    st.button("Click me")
+    st.write("Welcome to your Rivacube Solution")
+    
 
     snp500 = pd.read_csv("Datasets/SP500.csv")
     cac40 = pd.read_csv("Datasets/CAC40.csv")
@@ -794,7 +794,8 @@ if check_password():
        fig2 = px.bar(dfAaplproc[1:10].sum(axis=1))
        st.plotly_chart(fig2)
        url2 = "http://195.15.241.6:8000/accounts/login/?next=/"
-       st.write("For more information, please connect to the MediaDash page [MediaDash](%s)" % url2)
+       st.write("For more information, please connect to the MediaDash page") 
+       st.button("[MediaDash](%s)" % url2)
 
        #st.plotly_chart(fig3)
        #def displayPDF(file):
