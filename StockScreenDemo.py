@@ -791,9 +791,8 @@ if check_password():
        st.header("Vue des Sentiments des tweets")
        st.subheader("Emotions qui ressortent le plus du stock {}".format(ticker))
        index_sent = dfAaplproc[1:10].values
-       count_sent = [dfAaplproc[sent].value_counts()[1] for sent in index_sent]
        fig3 = px.bar(x=index_sent,
-             y=count_sent,
+             y=dfAaplproc[1:10].sum(axis=1),
              color=count_sent,
              color_continuous_scale=px.colors.sequential.Pinkyl,
              title='Sentiment volume')
