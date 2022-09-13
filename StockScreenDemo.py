@@ -788,7 +788,7 @@ if check_password():
        st.header("Vue temporelle du flux de tweet")
        st.subheader("Volume des tweets par jour du stock {}".format(ticker))
        st.plotly_chart(fig)
-       fig2 = px.bar(dfAaplproc.columns[1:10]].sum(), rot=90, color='DarkTurquoise')
+       fig2 = px.bar(dfAaplproc.columns[1:10].sum(), rot=90, color='DarkTurquoise')
        st.plotly_chart(fig2)
        #def displayPDF(file):
     	# ---Test with Display PDF Opening file from file path
