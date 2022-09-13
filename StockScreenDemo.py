@@ -791,8 +791,12 @@ if check_password():
        st.header("Vue des Sentiments des tweets")
        st.subheader("Emotions qui ressortent le plus du stock {}".format(ticker))
        #fig3 = px.bar(dfAaplproc[1:10], x='index_sent', y='dfAaplproc[1:10].sum(axis=1)', color_continuous_scale=px.colors.sequential.Pinkyl, title='Sentiment volume')
-       fig2 = px.bar(dfAaplproc[1:10].sum(axis=1), color= 'index')
+       fig2 = px.bar(dfAaplproc[1:10].sum(axis=1))
        st.plotly_chart(fig2)
+       url2 = "https://www.freecodecamp.org/news/use-python-spacy-streamlit-to-build-structured-financial-newsfeed/"
+       st.write("check out this [link](%s)" % url2)
+
+       st.markdown("check out this [link](%s)" % url2)
        #st.plotly_chart(fig3)
        #def displayPDF(file):
     	# ---Test with Display PDF Opening file from file path
