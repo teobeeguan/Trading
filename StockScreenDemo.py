@@ -777,8 +777,8 @@ if check_password():
        st.title('MediaDash Twitter')
        Aaplproc = pd.read_csv("Media/AAPL_preproc.csv", sep=' ')
        st.table(Aaplproc.head())
-       Aaplprocfr = pd.DataFrame(Aaplproc, columns=['date','volume'])
-       fig = px.bar(Aaplprocfr, x='date', y='volume', title = ticker + ' Daily Volume tweet')
+       dfAaplproc = pd.DataFrame(Aaplproc, columns=['date','volume'])
+       fig = px.bar(dfAaplproc, x='date', y='volume', title = ticker + ' Daily Volume tweet')
        description = '''Il y a plusieurs groupes sur les réseaux sociaux (Twitter, Facebook, etc…) où des investisseurs individuels 
        échangent leurs avis et parviennent à créer des flux acheteurs ou vendeurs sur des titres. 
        Cette force defrappe va s’organiser progressivement et pourrait même pallier le manque d’informations sur plusieurssociétés. 
@@ -788,6 +788,8 @@ if check_password():
        st.header("Vue temporelle du flux de tweet")
        st.subheader("Volume des tweets par jour du stock {}".format(ticker))
        st.plotly_chart(fig)
+       fig2=dfAaplproc[dfAaplproc.columns[1:10]].sum().plot.bar(rot=90, color='DarkTurquoise')
+       st.plotly_chart(fig2)
        #def displayPDF(file):
     	# ---Test with Display PDF Opening file from file path
             #with open(file, "rb") as f:
