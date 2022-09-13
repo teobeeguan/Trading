@@ -795,7 +795,7 @@ if check_password():
        st.plotly_chart(fig2)
        url2 = "http://195.15.241.6:8000/accounts/login/?next=/"
        st.write("For more information, please connect to the MediaDash page") 
-       st.markdown("[link](%s)" % url2)
+       st.markdown("[Link to the Page](%s)" % url2)
 
        #st.plotly_chart(fig3)
        #def displayPDF(file):
