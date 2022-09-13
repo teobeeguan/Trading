@@ -790,7 +790,7 @@ if check_password():
        st.plotly_chart(fig)
        st.header("Vue des Sentiments des tweets")
        st.subheader("Emotions qui ressortent le plus du stock {}".format(ticker))
-       index_sent = dfAaplproc.columns[1:10].values
+       index_sent = dfAaplproc[1:10].values
        count_sent = [dfAaplproc[sent].value_counts()[1] for sent in index_sent]
        fig3 = px.bar(x=index_sent,
              y=count_sent,
