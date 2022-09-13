@@ -776,7 +776,7 @@ if check_password():
     	
        st.title('MediaDash Twitter')
        Aaplproc = pd.read_csv("Media/AAPL_preproc.csv", sep=' ')
-       st.table(Aaplproc)
+       st.table(Aaplproc.head())
        Aaplprocfr = pd.DataFrame(Aaplproc, columns=['date','volume'])
        fig = px.bar(Aaplprocfr, x='date', y='volume', title = ticker + ' Daily Volume tweet')
        description = '''Il y a plusieurs groupes sur les réseaux sociaux (Twitter, Facebook, etc…) où des investisseurs individuels 
