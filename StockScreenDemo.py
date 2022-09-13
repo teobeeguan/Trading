@@ -793,6 +793,7 @@ if check_password():
        CLASS_TYPE = dfAaplproc[1:10].values
        #fig3 = px.bar(dfAaplproc[1:10], x='index_sent', y='dfAaplproc[1:10].sum(axis=1)', color_continuous_scale=px.colors.sequential.Pinkyl, title='Sentiment volume')
        fig2 = px.bar(dfAaplproc[1:10].sum(axis=1), x= 'CLASS_TYPE')
+       st.table(CLASS_TYPE)
        st.plotly_chart(fig2)
        #st.plotly_chart(fig3)
        #def displayPDF(file):
