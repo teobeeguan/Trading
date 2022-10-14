@@ -453,7 +453,7 @@ if check_password():
         user_input=ticker
         df=pdr.DataReader(ticker, data_source="yahoo",start=d11,end=d22)
 
-        st.subheader("data from 1999")
+        st.subheader("data from the defined time period")
         st.write(df.describe())
 
         st.subheader("CLOSING PRICE VS TIME CHART")
@@ -546,7 +546,7 @@ if check_password():
 
 
        rhs, rh, rhs1 = st.columns((2.5,3,2))
-       rh.markdown(""" Let's have a look at some raw data""")
+       rh.markdown("""# Let's have a look at some raw data""")
        #period = st.radio('Choose the Duration of Schemantics',('1d','1mo','1y'))
 
        def load_data(ticker):
