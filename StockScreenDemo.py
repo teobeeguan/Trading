@@ -40,7 +40,7 @@ from prophet.plot import plot_plotly
 
 st.sidebar.image("https://slm-sa.com/wp-content/uploads/2020/01/LogoSLM-IF-1.png")
 st.sidebar.write("""
-# RIVACUBE SCREENER 
+# RIVALIGHT
 ## Dashboard for Data Visualization
 *By SLM for Rivaldi Project*
 
