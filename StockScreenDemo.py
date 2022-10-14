@@ -576,7 +576,7 @@ if check_password():
 
 
        START = "2015-01-01"
-       TODAY = date.today()
+       TODAY = datetime.date.today()
 
        @st.cache
        def load_data1(ticker):
