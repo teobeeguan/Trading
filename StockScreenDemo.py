@@ -813,6 +813,6 @@ if check_password():
        #displayPDF("Media/Twitter_ADOBE.pdf")
 
     	
-    if(infoType == 'DataSeer'):
+    #if(infoType == 'DataSeer'):
     	
-       st.title('Under Construction')	
+       #st.title('Under Construction')	
