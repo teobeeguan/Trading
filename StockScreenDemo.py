@@ -41,7 +41,7 @@ from prophet.plot import plot_plotly
 st.sidebar.image("https://slm-sa.com/wp-content/uploads/2020/01/LogoSLM-IF-1.png")
 st.sidebar.write("""
 # RIVALIGHT
-## AI Powered Solution for Financial Analysis
+## AI Powered Solution for Finance
 *By SLM for Rivaldi Project*
 
 """)
