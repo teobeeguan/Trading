@@ -546,7 +546,7 @@ if check_password():
 
 
        rhs, rh, rhs1 = st.columns((2.5,3,2))
-       rh.markdown("""####  Let's have a look at some raw data""")
+       rh.markdown("""## Let's have a look at some raw data""")
        #period = st.radio('Choose the Duration of Schemantics',('1d','1mo','1y'))
 
        def load_data(ticker):
