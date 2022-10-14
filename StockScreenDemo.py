@@ -589,6 +589,7 @@ if check_password():
 
        df_train = data1[['Date','Close']]
        df_train = df_train.rename(columns = {'Date':'ds','Close':'y'})
+       df_train['ds'].dt.tz_localize(None)
        st.write(df_train)
 
        predictor = Prophet()
