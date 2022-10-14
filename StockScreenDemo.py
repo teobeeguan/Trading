@@ -613,7 +613,7 @@ if check_password():
 
 
        fcs,fch,fcs1 = st.columns(3)
-       fch.markdown("""## Forecated Components""")
+       fch.markdown("""## Forecasted Components""")
        fig2 = predictor.plot_components(forecast)
        st.write(fig2)
 
