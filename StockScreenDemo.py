@@ -576,7 +576,7 @@ if check_password():
 
 
        START = "2015-01-01"
-       TODAY = "2022-01-01"
+       TODAY = datetime.date.today()
 
        @st.cache
        def load_data1(ticker):
@@ -585,11 +585,11 @@ if check_password():
            return data1
 
        data1 = load_data1(tickerSymbol)
-       #st.write(data1)
+       st.write(data1)
 
        df_train = data1[['Date','Close']]
        df_train = df_train.rename(columns = {'Date':'ds','Close':'y'})
-       #st.write(df_train)
+       st.write(df_train)
 
        predictor = Prophet()
        predictor.fit(df_train)
