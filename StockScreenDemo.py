@@ -41,7 +41,7 @@ from prophet.plot import plot_plotly
 st.sidebar.image("https://slm-sa.com/wp-content/uploads/2020/01/LogoSLM-IF-1.png")
 st.sidebar.write("""
 # RIVALIGHT
-## Dashboard for Data Visualization
+## AI Powered Solution for Financial Analysis
 *By SLM for Rivaldi Project*
 
 """)
@@ -83,7 +83,7 @@ def check_password():
         return True
 
 if check_password():
-    st.write("Welcome to your Rivacube Solution")
+    st.write("Welcome to your Rivalight Solution")
     
 
     snp500 = pd.read_csv("Datasets/SP500.csv")
