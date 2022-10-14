@@ -111,7 +111,7 @@ if check_password():
 
     infoType = st.sidebar.radio(
             "Choose an analysis type",
-            ('Fundamental', 'Technical', 'Intraday', 'Keras Prediction', 'Prophet Prediction', 'Sentiment', 'Media', 'ESG', 'DataSeer')
+            ('Fundamental', 'Technical', 'Intraday', 'Keras Prediction', 'Prophet Prediction', 'Sentiment', 'Media', 'ESG')
         )
 
     stock = yf.Ticker(ticker)
@@ -813,6 +813,6 @@ if check_password():
        #displayPDF("Media/Twitter_ADOBE.pdf")
 
     	
-    #if(infoType == 'DataSeer'):
+    if(infoType == 'DataSeer'):
     	
-       #st.title('Under Construction')	
+       st.title('Under Construction')	
