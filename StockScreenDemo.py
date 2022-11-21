@@ -575,8 +575,8 @@ if check_password():
        graphs3.line_chart(data['Adj Close'])
 
 
-       START = "2015-01-01"
-       TODAY = datetime.date.today()
+       START = starting
+       TODAY = ending
 
        @st.cache
        def load_data1(ticker):
