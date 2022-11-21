@@ -608,7 +608,7 @@ if check_password():
        #st.write(forecast.tail())
         
        afc.markdown(f'Forecast plot for {n_years} following years')
-       fig1 = plotly(predictor, forecast) #+ add_changepoints_to_plot(predictor)
+       fig1 = plot(predictor, forecast)
        st.plotly_chart(fig1)
 
 
