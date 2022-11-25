@@ -33,6 +33,7 @@ nltk.downloader.download('vader_lexicon')
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import plotly.express as px
 from prophet import Prophet
+from prophet.plot import add_changepoints_to_plot
 from plotly import graph_objs as go
 from prophet.plot import plot_plotly
 
@@ -609,6 +610,7 @@ if check_password():
         
        afc.markdown(f'Forecast plot for {n_years} following years')
        fig1 = plot_plotly(predictor, forecast)
+       a= add_changepoints_to_plot(fig1.gca(), predictor, forecast)
        st.plotly_chart(fig1)
 
 
