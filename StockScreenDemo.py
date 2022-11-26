@@ -610,8 +610,8 @@ if check_password():
         
        afc.markdown(f'Forecast plot for {n_years} following years')
        fig1 = plot_plotly(predictor, forecast)
-       a = add_changepoints_to_plot(fig1.gca(), predictor, forecast)
        st.plotly_chart(fig1)
+       a = add_changepoints_to_plot(fig1.gca(), predictor, forecast)
 
 
        fcs,fch,fcs1 = st.columns(3)
