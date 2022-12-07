@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from keras.models import load_model
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScalar
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from random import randint 
