@@ -13,6 +13,7 @@ import yaml
 import yfinance as yf
 import streamlit as st
 import base64
+import sklearn
 import streamlit.components.v1 as components
 import datetime as dt
 import streamlit_authenticator as stauth
