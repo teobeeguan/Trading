@@ -108,7 +108,7 @@ if check_password():
     	ticker = st.sidebar.selectbox('Choose a CAC 40 Stock',symbolsCAC40)
     elif Universe == 'FTSE 100':
     	ticker = st.sidebar.selectbox('Choose a FTSE 100 Stock',symbolsFTSE100)
-    traday = pdr.DataReader(ticker, data_source="yahoo")
+    #Error()?traday = pdr.DataReader(ticker, data_source="yahoo")
 
 
 
